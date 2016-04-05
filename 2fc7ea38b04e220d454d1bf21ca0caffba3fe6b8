@@ -1,0 +1,147 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_20ddbf14",
+        "filename": "GameArea.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1007647
+      },
+      "writtenOn": "2016-04-05T14:03:20Z",
+      "side": 1,
+      "message": "mAreaListner, not mAreaListener",
+      "revId": "2fc7ea38b04e220d454d1bf21ca0caffba3fe6b8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_80cecb58",
+        "filename": "GameArea.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1007647
+      },
+      "writtenOn": "2016-04-05T14:03:20Z",
+      "side": 1,
+      "message": "mAreaPosX, mAreaPosY or mPosXArea, mPosYArea, but first variant is better",
+      "revId": "2fc7ea38b04e220d454d1bf21ca0caffba3fe6b8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_80f5ab84",
+        "filename": "GameAreaListener.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1007647
+      },
+      "writtenOn": "2016-04-05T14:03:20Z",
+      "side": 1,
+      "message": "large tab",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 1
+      },
+      "revId": "2fc7ea38b04e220d454d1bf21ca0caffba3fe6b8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_60f2a79c",
+        "filename": "GameLauncher.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1007647
+      },
+      "writtenOn": "2016-04-05T14:03:20Z",
+      "side": 1,
+      "message": "large tab too",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 1
+      },
+      "revId": "2fc7ea38b04e220d454d1bf21ca0caffba3fe6b8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_00307b55",
+        "filename": "GameLauncher.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1007647
+      },
+      "writtenOn": "2016-04-05T14:03:20Z",
+      "side": 1,
+      "message": "more than 80 symbols",
+      "revId": "2fc7ea38b04e220d454d1bf21ca0caffba3fe6b8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_803c8b30",
+        "filename": "Menu.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1007647
+      },
+      "writtenOn": "2016-04-05T14:03:20Z",
+      "side": 1,
+      "message": "this might be final variable",
+      "range": {
+        "startLine": 56,
+        "startChar": 25,
+        "endLine": 56,
+        "endChar": 32
+      },
+      "revId": "2fc7ea38b04e220d454d1bf21ca0caffba3fe6b8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_404683c0",
+        "filename": "SRunner.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1007647
+      },
+      "writtenOn": "2016-04-05T14:03:20Z",
+      "side": 1,
+      "message": "this should be a variables",
+      "range": {
+        "startLine": 28,
+        "startChar": 43,
+        "endLine": 28,
+        "endChar": 52
+      },
+      "revId": "2fc7ea38b04e220d454d1bf21ca0caffba3fe6b8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
