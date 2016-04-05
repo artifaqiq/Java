@@ -22,13 +22,16 @@ public class Menu extends BorderPane {
   protected static final int RUNNER_HEIGHT = 200, RUNNER_WIDTH = 50;
   protected static final int BUTTON_WIDTH = 145, BUTTON_HEIGHT = 50;
   protected static final int CANVAS_WIDTH = 1270, CANVAS_HEIGHT = 730;
+  protected static final int BUTTON_SPACING = 5;
   private static final int COUNT_IMAGES = 10;
-  private static final int RUNNER_POS_X = 100, RUNNER_POS_Y = 80;
-
+  private static final int RUNNER_POS_X = 100, RUNNER_POS_Y = 45;
+  
   private Canvas mRunnerCanvas;
   private Color backgroundColor = Color.AZURE;
   private GameListener mListener;
 
+  private int mItButtons;
+  
   public Menu() {
     getStylesheets().add(Menu.class.getResource("application.css").toExternalForm());
 
@@ -53,7 +56,7 @@ public class Menu extends BorderPane {
     buttonsRun.forEach(mButtonsRun -> mButtonsRun.setPrefSize(BUTTON_WIDTH * 2, BUTTON_HEIGHT * 2));
     buttonsRunVbox.getChildren().add(autoMode);
     buttonsRunVbox.getChildren().addAll(buttonsRun);
-    buttonsRunVbox.setSpacing(15);
+    buttonsRunVbox.setSpacing(BUTTON_SPACING);
 
     Button buttonExit = new Button("EXIT");
     buttonExit.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
@@ -62,18 +65,14 @@ public class Menu extends BorderPane {
     Button buttonViewStatistic = new Button("STATISTIC");
     buttonViewStatistic.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
     buttonViewStatistic.setId("dark-blue");
-    Button buttonSetting = new Button("SETTING");
-    buttonSetting.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
-    buttonSetting.setId("dark-blue");
-    buttonsControlHbox.getChildren().addAll(buttonSetting, buttonViewStatistic);
 
-    buttonsControlHbox.setSpacing(10);
+    buttonsControlHbox.setSpacing(BUTTON_SPACING);
     buttonsControlHbox.getChildren().addAll(buttonExit);
 
     setBottom(buttonsControlHbox);
 
     setLeft(buttonsRunVbox);
-    setPadding(new Insets(10, 10, 10, 10));
+    setPadding(new Insets(BUTTON_SPACING, BUTTON_SPACING, BUTTON_SPACING, BUTTON_SPACING));
 
     ArrayList<ImageView> runnerImages = new ArrayList<>();
     for (int i = 0; i < COUNT_IMAGES; i++) {
@@ -82,9 +81,9 @@ public class Menu extends BorderPane {
       runnerImages.get(i).setFitHeight(RUNNER_HEIGHT);
     }
 
-
     mRunnerCanvas = new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
     setRight(mRunnerCanvas);
+    
     AnimationTimer animationTimer = new AnimationTimer() {
       private int mIterImages = 0;
       private long mLastNanoTime = System.nanoTime();
@@ -114,34 +113,17 @@ public class Menu extends BorderPane {
       }
     });
     
-    buttonsRun.get(0).setOnAction(new EventHandler<ActionEvent>() {
-      @Override
-      public void handle(ActionEvent event) {
-        animationTimer.stop();
-        mListener.startGame(1, autoMode.isSelected());
-      }
-    });
-    buttonsRun.get(1).setOnAction(new EventHandler<ActionEvent>() {
-      @Override
-      public void handle(ActionEvent event) {
-        animationTimer.stop();
-        mListener.startGame(2, autoMode.isSelected());
-      }
-    });
-    buttonsRun.get(2).setOnAction(new EventHandler<ActionEvent>() {
-      @Override
-      public void handle(ActionEvent event) {
-        animationTimer.stop();
-        mListener.startGame(3, autoMode.isSelected());
-      }
-    });
-    buttonsRun.get(3).setOnAction(new EventHandler<ActionEvent>() {
-      @Override
-      public void handle(ActionEvent event) {
-        animationTimer.stop();
-        mListener.startGame(4, autoMode.isSelected());
-      }
-    });
+    for(mItButtons = 0; mItButtons < buttonsRun.size(); mItButtons++) {
+      buttonsRun.get(mItButtons).setOnAction(new EventHandler<ActionEvent>() {
+        private int countArea = Menu.this.mItButtons + 1;
+      
+        @Override
+        public void handle(ActionEvent event) {
+          animationTimer.stop();
+          mListener.startGame(countArea, autoMode.isSelected());
+        }
+      });
+    }
   }
 
   public void setListener(GameListener listener) {

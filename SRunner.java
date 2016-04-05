@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 public class SRunner extends Application implements GameListener {
   private Pane mRoot;
-  private static final int WIDTH_WINDOW = 600, HEIGHT_WINDOW = 800;
+  private static final int WINDOW_WIDTH= 1600, WINDOW_HEIGHT = 800;
 
   @Override
   public void start(Stage theStage) {
@@ -18,14 +18,14 @@ public class SRunner extends Application implements GameListener {
     showMenu();
     theStage.setScene(scene);
     theStage.setTitle("S-Runner");
+    theStage.setResizable(false);
     theStage.show();
-
   }
 
   @Override
   public void startGame(int countArea, boolean autoMode) {
     mRoot.getChildren().clear();
-    GameLauncher launcher = new GameLauncher(1600, 800, countArea, autoMode);
+    GameLauncher launcher = new GameLauncher(WINDOW_WIDTH, WINDOW_HEIGHT, countArea, autoMode);
     launcher.setListener(this);
     mRoot.getChildren().add(launcher);
   }

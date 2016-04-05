@@ -20,6 +20,8 @@ public class GameLauncher extends Canvas implements GameAreaListener {
   private boolean mPause = false;
   private boolean mAuto;
 
+  private static long LOSE__NANO_SLEEP = 1_500_000_000l;
+
   public GameLauncher(int width, int height, int countArea, boolean auto) {
     super(width, height);
     mWidth = width > 0 ? width : 1600;
@@ -74,10 +76,8 @@ public class GameLauncher extends Canvas implements GameAreaListener {
             mPause = false;
           }
         }
-
       }
     });
-
   }
 
   @Override
@@ -91,9 +91,12 @@ public class GameLauncher extends Canvas implements GameAreaListener {
 
       @Override
       public void handle(long now) {
-        getGraphicsContext2D().setFill(Color.RED);
-        getGraphicsContext2D().fillText("You are LOOOOSER. Score = " + mScore, 400, 400);
-        if (now - startNanoTime >= 1_500_000_000l) {
+        getGraphicsContext2D().setStroke(Color.DARKRED);
+        getGraphicsContext2D().setFont(new Font(96));
+        getGraphicsContext2D().strokeText("You lose. Score: " + mScore,
+            GameLauncher.this.getWidth() / 4, GameLauncher.this.getHeight() / 2,
+            GameLauncher.this.getWidth() / 2);
+        if (now - startNanoTime >= LOSE__NANO_SLEEP) {
           this.stop();
           mListener.showMenu();
         }
