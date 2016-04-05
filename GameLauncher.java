@@ -20,7 +20,7 @@ public class GameLauncher extends Canvas implements GameAreaListener {
   private boolean mPause = false;
   private boolean mAuto;
 
-  private static long LOSE__NANO_SLEEP = 1_500_000_000l;
+  private static final long LOSE_NANO_SLEEP = 1_500_000_000l;
 
   public GameLauncher(int width, int height, int countArea, boolean auto) {
     super(width, height);
@@ -96,7 +96,7 @@ public class GameLauncher extends Canvas implements GameAreaListener {
         getGraphicsContext2D().strokeText("You lose. Score: " + mScore,
             GameLauncher.this.getWidth() / 4, GameLauncher.this.getHeight() / 2,
             GameLauncher.this.getWidth() / 2);
-        if (now - startNanoTime >= LOSE__NANO_SLEEP) {
+        if (now - startNanoTime >= LOSE_NANO_SLEEP) {
           this.stop();
           mListener.showMenu();
         }

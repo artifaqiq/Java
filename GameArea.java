@@ -13,7 +13,7 @@ import javafx.scene.paint.Color;
 public class GameArea implements Runnable {
   /** Listener interface used for communication with the flow of the other classes of */
   protected GameAreaListener mAreaListener;
-  protected static final int GROUND_HIGHT = 10;
+  protected static final int GROUND_HEIGHT = 10;
   protected static final int START_SPEED = 500;
   protected static final int WALLS_COUNT = 3;
   protected static final int MIN_WIDTH_WALL = 40, MAX_WIDTH_WALL = 80;
@@ -21,7 +21,7 @@ public class GameArea implements Runnable {
   
   private static final int AUTO_MODE_JUMP_POS = 130;
   private static final float SPEED_UP_BY_SCORE = 0.05f;
-  private static final int SCORE_TEXT_WEIDTH = 200;
+  private static final int SCORE_TEXT_WIDHT = 200;
   private static final int SCORE_TEXT_HEIGHT = 50;
   private static final int RUNNER_POS_X = 40;
   private static final float RUNNER_SIZE_SCALE = 1.58f;
@@ -36,7 +36,6 @@ public class GameArea implements Runnable {
   private boolean mAuto;
 
   protected int mMinHeightWall, mMaxHeightWall;
-
   protected int mAreaPosX, mAreaPosY;
   protected int mAreaWidth, mAreaHeight;
   protected int mSpeed = GameArea.START_SPEED;
@@ -92,11 +91,11 @@ public class GameArea implements Runnable {
     GraphicsContext gc = mCanvas.getGraphicsContext2D();
 
     gc.setFill(Color.BLACK);
-    gc.fillRect(0, mAreaPosY + mAreaHeight - GROUND_HIGHT, mAreaWidth, GROUND_HIGHT);
+    gc.fillRect(0, mAreaPosY + mAreaHeight - GROUND_HEIGHT, mAreaWidth, GROUND_HEIGHT);
 
-    gc.clearRect(mAreaPosX, mAreaPosY, mAreaWidth, mAreaHeight - GameArea.GROUND_HIGHT);
+    gc.clearRect(mAreaPosX, mAreaPosY, mAreaWidth, mAreaHeight - GameArea.GROUND_HEIGHT);
     gc.setFill(mBackgroundFill);
-    gc.fillRect(mAreaPosX, mAreaPosY - 1, mAreaWidth, mAreaHeight - GameArea.GROUND_HIGHT + 1);
+    gc.fillRect(mAreaPosX, mAreaPosY - 1, mAreaWidth, mAreaHeight - GameArea.GROUND_HEIGHT + 1);
 
     mRunner.render(gc);
 
@@ -105,7 +104,7 @@ public class GameArea implements Runnable {
     }
     if (mScore != -1) {
       gc.setStroke(Color.BLACK);
-      gc.strokeText("Score: " + mScore, mAreaWidth - SCORE_TEXT_WEIDTH, SCORE_TEXT_HEIGHT);
+      gc.strokeText("Score: " + mScore, mAreaWidth - SCORE_TEXT_WIDHT, SCORE_TEXT_HEIGHT);
     }
   }
 
@@ -160,7 +159,7 @@ public class GameArea implements Runnable {
       int randomHeightWall = new Random().nextInt(mMinHeightWall) + mMaxHeightWall - mMinHeightWall;
 
       mWalls.add(new Wall(mAreaPosX + posLastWall + randomDistanceBetweenWalls,
-          mAreaPosY + mAreaHeight - randomHeightWall - GROUND_HIGHT, mSpeed));
+          mAreaPosY + mAreaHeight - randomHeightWall - GROUND_HEIGHT, mSpeed));
       mWalls.get(i).setSize(randomWidthWall, randomHeightWall);
       posLastWall = mWalls.get(i).getPositionX();
     }
@@ -169,7 +168,7 @@ public class GameArea implements Runnable {
   protected void generateRunner(int countArea) {
     int runnerHeight = mAreaHeight / 4;
     mRunner = new Runner(mAreaPosX + RUNNER_POS_X,
-        mAreaPosY + mAreaHeight - runnerHeight - GROUND_HIGHT + 5);
+        mAreaPosY + mAreaHeight - runnerHeight - GROUND_HEIGHT + 5);
     mRunner.setSize((int) (runnerHeight / RUNNER_SIZE_SCALE), runnerHeight);
     int startSpeedJump;
     switch (countArea) {
@@ -197,7 +196,7 @@ public class GameArea implements Runnable {
     int randomHeightWall = new Random().nextInt(mMinHeightWall) + mMaxHeightWall - mMinHeightWall;
 
     Wall wall = new Wall(mAreaPosX + randomDistanceBetweenWalls + lastWallPos,
-        mAreaPosY + mAreaHeight - randomHeightWall - GROUND_HIGHT, mSpeed);
+        mAreaPosY + mAreaHeight - randomHeightWall - GROUND_HEIGHT, mSpeed);
     wall.setSize(randomWidthWall, randomHeightWall);
     return wall;
   }
