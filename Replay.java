@@ -114,8 +114,6 @@ class ReplayReader {
       matcher.find();
       wall.setHeight(new Integer(matcher.group()));
 
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
     } catch (IOException e2) {
       e2.printStackTrace();
     } finally {
@@ -189,8 +187,6 @@ class ReplayReader {
       matcher.find();
       color = Color.valueOf(matcher.group());
 
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
     } catch (IOException e2) {
       e2.printStackTrace();
     } finally {
@@ -230,8 +226,6 @@ class ReplayReader {
       matcher.find();
       jumpTime = new Long(matcher.group());
 
-    } catch (FileNotFoundException e) {
-      e.printStackTrace();
     } catch (IOException e2) {
       e2.printStackTrace();
     } finally {
@@ -246,6 +240,7 @@ class ReplayReader {
     return jumpTime;
   }
 }
+
 
 class WallCoord {
   int mDistance;
