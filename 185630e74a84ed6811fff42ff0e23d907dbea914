@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_70be87d5",
+        "filename": "NotationParser.scala",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1007647
+      },
+      "writtenOn": "2016-05-03T16:28:23Z",
+      "side": 1,
+      "message": "check all lengths of lines",
+      "range": {
+        "startLine": 12,
+        "startChar": 80,
+        "endLine": 12,
+        "endChar": 140
+      },
+      "revId": "185630e74a84ed6811fff42ff0e23d907dbea914",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_b0c40f5f",
+        "filename": "Statistics.scala",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1007647
+      },
+      "writtenOn": "2016-05-03T16:28:23Z",
+      "side": 1,
+      "message": "80",
+      "range": {
+        "startLine": 20,
+        "startChar": 80,
+        "endLine": 20,
+        "endChar": 93
+      },
+      "revId": "185630e74a84ed6811fff42ff0e23d907dbea914",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
