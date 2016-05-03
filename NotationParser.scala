@@ -9,7 +9,8 @@ package srun {
 
   sealed trait Action
   case class Walls(distance: Int, height: Int, width: Int) extends Action {
-    override def toString = "с расстоянием до послдней стены " + distance + " пксл высотой " + height + " пксл и длиной " + width + " пксл";
+    override def toString = "с расстоянием до послдней стены " + distance + " пксл высотой " + 
+    height + " пксл и длиной " + width + " пксл";
   }
   case class Jump(distance: Int) extends Action {
     override def toString = "когда расстояние до ближайшей стены было " + distance + " пксл";
@@ -61,10 +62,12 @@ package srun {
     private def actionFromString(s: String): Action = {
       val tokens: Array[String] = s.split(" ")
       tokens(0) match {
-        case "wall:" => new Walls(tokens(1).split("=")(1).toInt, tokens(2).split("=")(1).toInt, tokens(3).split("=")(1).toInt)
+        case "wall:" => new Walls(tokens(1).split("=")(1).toInt, tokens(2).split("=")(1).toInt, 
+            tokens(3).split("=")(1).toInt)
         case "jump:" => new Jump(tokens(1).split("=")(1).toInt)
         case "dead:" => new Dead(tokens(1).split("=")(1).toInt)
-        case "background:" => new Color(Integer.parseInt((tokens(1).split("=")(1).split("x")(1).substring(0, 7)), 16))
+        case "background:" => new Color(Integer.parseInt(
+            (tokens(1).split("=")(1).split("x")(1).substring(0, 7)), 16))
         case "mode:" => new Mode(tokens(1).split("=")(1).toBoolean)
         case _ => new Walls(0, 0, 0)
 

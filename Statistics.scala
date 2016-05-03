@@ -17,7 +17,8 @@ package srun {
       @tailrec
       def getStatIter(i: Int, accum: Game): Game = {
         if (i == ReplayIO.countGames) accum
-        else getStatIter(i + 1, accum + getStatGame(ReplayIO.getReplayDir + File.separator + "game" + i))
+        else getStatIter(i + 1, accum + getStatGame(ReplayIO.getReplayDir + 
+            File.separator + "game" + i))
 
       };
       getStatIter(0, Game(0, 0, 0))
