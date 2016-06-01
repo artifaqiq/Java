@@ -1,0 +1,112 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#background {
+    -fx-background-image: url("../res/img1.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: cover, auto;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+
+#table {
+    -fx-background-image: url("../res/img2.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: cover, auto;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+
+#easy {
+    -fx-background-color: 
+        linear-gradient(#B9FF2C, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), #B9FF2C);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+    -fx-padding: 10 20 10 20;
+}
+
+#check {
+    -fx-background-radius: 10;
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+    -fx-padding: 10 20 10 20;
+}
+
+#check2 {
+    -fx-background-radius: 10;
+    -fx-font-weight: bold;
+    -fx-font-size: 26px;
+    -fx-padding: 10 20 10 20;
+}
+
+#normal {
+    -fx-background-color: 
+        linear-gradient(#FFD500, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), #FFD500);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+    -fx-padding: 10 20 10 20;
+}
+
+#nightmare {
+    -fx-background-color: 
+        linear-gradient(#FF4D00, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), #FF4D00);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+    -fx-padding: 10 20 10 20;
+}
+
+#hell {
+    -fx-background-color: 
+        linear-gradient(#F30303, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(240,0,0));
+    -fx-background-radius: 10;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+    
+    -fx-padding: 10 20 10 20;
+}
+
+#dark-blue {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 16px;
+    -fx-padding: 10 20 10 20;
+}
+#dark-blue Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+ 
